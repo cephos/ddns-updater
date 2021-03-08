@@ -45,7 +45,7 @@ ARG TARGETPLATFORM
 ARG VERSION=unknown
 ARG BUILD_DATE="an unknown date"
 ARG COMMIT=unknown
-RUN GOARCH="arm" \
+RUN GOARCH="amd64" \
     GOARM="5" \
     go build -trimpath -ldflags="-s -w \
     -X 'main.version=$VERSION' \
