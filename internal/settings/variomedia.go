@@ -47,7 +47,7 @@ func NewVariomedia(data json.RawMessage, domain, host string, ipVersion models.I
 	return d, nil
 }
 
-func (d *dyn) isValid() error {
+func (d *variomedia) isValid() error {
 	switch {
 	case len(d.username) == 0:
 		return ErrEmptyUsername
