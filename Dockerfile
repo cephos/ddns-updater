@@ -45,7 +45,7 @@ ARG TARGETPLATFORM
 ARG VERSION=unknown
 ARG BUILD_DATE="an unknown date"
 ARG COMMIT=unknown
-RUN GOARCH="$(xcputranslate -targetplatform ${TARGETPLATFORM} -field arch)" \
+RUN GOARCH="arm" \
     GOARM="5" \
     go build -trimpath -ldflags="-s -w \
     -X 'main.version=$VERSION' \
