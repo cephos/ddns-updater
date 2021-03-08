@@ -1,9 +1,10 @@
 version: "3.7"
 services:
   ddns-updater:
-    image: qmcgaw/ddns-updater
+    build: .
     container_name: ddns-updater
     network_mode: bridge
+    hostname: dynDns
     ports:
       - "0.0.0.0:8450:8000"
     volumes:
