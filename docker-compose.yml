@@ -5,9 +5,9 @@ services:
     container_name: ddns-updater
     network_mode: bridge
     ports:
-      - 8000:8000/tcp
+      - "0.0.0.0:8450:8000"
     volumes:
-      - ./data:/updater/data
+      - /home/dei/ddnsData:/updater/data
     environment:
       - CONFIG=
       - PERIOD=5m
