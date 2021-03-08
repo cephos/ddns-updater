@@ -33,7 +33,7 @@ func NewVariomedia(data json.RawMessage, domain, host string, ipVersion models.I
 	if err := json.Unmarshal(data, &extraSettings); err != nil {
 		return nil, err
 	}
-	d := &dyn{
+	d := &variomedia{
 		domain:        domain,
 		host:          host,
 		ipVersion:     ipVersion,
